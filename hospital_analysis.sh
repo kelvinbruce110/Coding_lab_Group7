@@ -11,7 +11,7 @@ echo "Generating critical alerts report..."
         $1, $2, $3
     }' > reports/critical_alerts.txt
 
-    echo "Report saved to reports/critical_alerts.txt".
+    echo "Report saved to reports/critical_alerts.txt"
 }
 
 #member 6
