@@ -1,34 +1,28 @@
-#!/usr/bin/env bash
-#Member 4's space 
+#!/bin/bash
 
-timestamp="$(date +%Y%m%d_%H%M%S)"
+# Generate a timestamp for archive filenames
+timestamp=$(date +"%Y%m%d_%H%M")
 
-mkdir -p archived_logs
-mkdir -p active_logs
+echo "Starting log archival process..."
 
-archive_log() {
-    local logfile
-    local filename
-    local extension
-    
-    logfile="$1"
+# Move and rename Heart Rate log
+mv active_logs/heart_rate.log \
+   archived_logs/heart_rate_${timestamp}.log
 
-    if [ -f "$logfile" ]; then
+# Move and rename Temperature log
+mv active_logs/temperature.log \
+   archived_logs/temperature_${timestamp}.log
 
-        filename="$(basename "$logfile")"
-        extension="${filename%.log}"
+# Move and rename Water Usage log
+mv active_logs/water_usage.log \
+   archived_logs/water_usage_${timestamp}.log
 
-        mv "$logfile" \
-            "archived_logs/${extension}_${timestamp}.log"
+echo "Logs successfully moved to archived_logs."
 
-        touch "$logfile"
+# Recreate empty log files for the Python simulator
+touch active_logs/heart_rate.log
+touch active_logs/temperature.log
+touch active_logs/water_usage.log
 
-        echo "Archived: ${extension}.log"
-    fi
-}
-
-archive_log "active_logs/heart_rate.log"
-archive_log "active_logs/temperature.log"
-archive_log "active_logs/water_usage.log"
-
-echo "Log rotation completed."
+echo "Fresh log files created in active_logs."
+echo "Archive completed at: $(date)"
