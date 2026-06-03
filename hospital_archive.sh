@@ -26,3 +26,9 @@ archive_log() {
         echo "Archived: ${extension}.log"
     fi
 }
+
+archive_log "active_logs/heart_rate.log"
+archive_log "active_logs/temperature.log"
+archive_log "active_logs/water_usage.log"
+
+echo "Log rotation completed."
