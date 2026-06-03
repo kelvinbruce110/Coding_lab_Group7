@@ -7,7 +7,7 @@ process_vitals() {
 
 #member 6
 water_audit() {
-  awk -F'|' '
+	awk -F'|' '
 
     /ICU_WATER_RESERVE/ {
         sum += $3
@@ -28,7 +28,5 @@ water_audit() {
         }
     }
 
-    ' active_logs/water_usage.log.
+    ' active_logs/water_usage.log
 }
-
-
