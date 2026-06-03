@@ -4,7 +4,7 @@
 process_vitals() {
 echo "Generating critical alerts report..."
 
-    grep "CRITICAL" active_logs/heart_rate.log active_logs/temperature.log | \
+    grep "CRITICAL" active_logs/heart_rate_log.log active_logs/temperature_log.log | \
     awk -F'|' '
     {
         printf "Timestamp: %s | Device_ID: %s | Value: %s\n",
@@ -37,5 +37,8 @@ water_audit() {
         }
     }
 
-    ' active_logs/water_usage.log
+    ' active_logs/water_usage_log.log
 }
+
+process_vitals
+water_audit
