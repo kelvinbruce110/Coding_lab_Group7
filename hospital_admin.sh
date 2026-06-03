@@ -11,4 +11,9 @@ secure_data() {
 }
 
 #member 3
+initialize_system
+secure_data
 
+echo "System environment secured"
+
+date
