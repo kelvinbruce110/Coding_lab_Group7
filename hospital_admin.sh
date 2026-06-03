@@ -2,7 +2,19 @@
 
 #member 1
 initialize_system() {
-
+initialize_system() {
+    echo "[INFO] Starting environment initialization..."
+    
+    local directories=("active_logs" "archived_logs" "reports")
+    
+    for dir in "${directories[@]}"; do
+        if [ ! -d "$dir" ]; then
+            echo "[M1] Creating '$dir' directory..."
+            mkdir -p "$dir"
+        else
+            echo "[M1] Directory '$dir' already exists. Skipping creation."
+        fi
+    done
 }
 
 #member 2
