@@ -42,7 +42,7 @@ Our shell scripts perform the following tasks:
 ## Repository Structure
 
 ```text
-Coding-lab_GroupXX/
+Coding-lab_Group7/
 ├── hospital_system.py
 ├── hospital_admin.sh
 ├── hospital_analysis.sh
