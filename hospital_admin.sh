@@ -9,6 +9,7 @@ initialize_system() {
 secure_data() {
 	echo "Applying security permissions..."
 	chmod 700 active_logs
+	echo "Current permissions"
 
 
 }
