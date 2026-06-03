@@ -12,7 +12,7 @@ initialize_system() {
         else
             echo "[M1] Directory '$dir' already exists. Skipping creation."
         fi
-done
+//done
 }
 
 #member 2
