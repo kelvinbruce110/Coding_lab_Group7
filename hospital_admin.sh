@@ -10,7 +10,7 @@ secure_data() {
 	echo "Applying security permissions..."
 	chmod 700 active_logs
 	echo "Current permissions"
-	ls -ld active_logs
+	ls -ld active_logs 4
 
 
 }
