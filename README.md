@@ -43,10 +43,9 @@ Our shell scripts perform the following tasks:
 
 ```text
 Coding_lab_Group7/
-├── scripts/
-│   ├── hospital_admin.sh
-│   ├── hospital_analysis.sh
-│   └── hospital_archive.sh
+├── hospital_admin.sh
+├── hospital_analysis.sh
+├── hospital_archive.sh
 ├── hospital_system.py
 ├── .gitignore
 └── README.md
