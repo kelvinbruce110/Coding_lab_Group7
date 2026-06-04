@@ -18,6 +18,11 @@ done
 #member 2
 secure_data() {
 	echo "Applying security permissions..."
+	if [ ! -d active_logs ]; then
+		echo "active_logs directory doesnt exist"
+		return 1
+	fi
+		
 	chmod 700 active_logs
 	echo "Current permissions"
 	ls -ld active_logs 
