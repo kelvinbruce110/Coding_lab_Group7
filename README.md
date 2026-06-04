@@ -58,7 +58,7 @@ Coding-lab_Group7/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/tmachingur-code/Coding-lab_Group7.git
+git clone https://github.com/kelvinbruce110/Coding_lab_Group7
 cd Coding-lab_Group7
 ```
 
