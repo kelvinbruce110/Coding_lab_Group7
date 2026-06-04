@@ -42,11 +42,12 @@ Our shell scripts perform the following tasks:
 ## Repository Structure
 
 ```text
-Coding-lab_Group7/
+Coding_lab_Group7/
+├── scripts/
+│   ├── hospital_admin.sh
+│   ├── hospital_analysis.sh
+│   └── hospital_archive.sh
 ├── hospital_system.py
-├── hospital_admin.sh
-├── hospital_analysis.sh
-├── hospital_archive.sh
 ├── .gitignore
 └── README.md
 ```
@@ -58,8 +59,8 @@ Coding-lab_Group7/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/kelvinbruce110/Coding-lab_Group7
-cd Coding-lab_Group7
+git clone https://github.com/kelvinbruce110/Coding_lab_Group7
+cd Coding_lab_Group7
 ```
 
 ### Initialize Environment
